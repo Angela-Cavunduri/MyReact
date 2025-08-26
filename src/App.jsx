@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import HelloWorld from './Components/HelloWorld.jsx'
+import Frase from './Components/Frase.jsx'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
+        <Frase/>
         <HelloWorld/>
       </div>
       <p className="read-the-docs">
