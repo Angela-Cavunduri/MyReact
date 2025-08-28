@@ -2,37 +2,28 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import OutraLista from './Components/OutraLista'
 import HelloWorld from './Components/HelloWorld.jsx'
 import Evento from './Components/Evento.jsx'
 import From from './Components/From.jsx'
+import SayMyName from './Components/SayMyName.jsx'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+function App(){
+  const MeusItens=["React","Vue","Angular"]
+  return(
     <>
+    <h1>Renderização de listas</h1>
+    <OutraLista itens={MeusItens}/>
+     <OutraLista itens={[]}/>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-        <HelloWorld/>
+       
+       
       </div>
       <Evento/>
       <From/>  
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+         <HelloWorld/>
+         <SayMyName nome="Ângela"/>
       </p>
     </>
   )
