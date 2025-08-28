@@ -1,23 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import OutraLista from './Components/OutraLista'
-import HelloWorld from './Components/HelloWorld.jsx'
-import SayMyName from './Components/SayMyName.jsx'
-import SeuNome from './Components/SeuNome.jsx'
-import Saudacao from './Components/Saudacao.jsx'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import Home from "./Pages/Home"
+import Empresa from "./Pages/Empresa"
+import Contacto from "./Pages/Contacto"
+import Navbar from "./Components/Iayout.jsx/Navbar"
+import Footer from "./Components/Iayout.jsx/Footer"
 
-function App(){
-  const [nome,SetNome]=useState()
+function App() {
+  return (
+    <Router>
+     <Navbar/>
 
-  return(
-    <>
-    <h1>State Lift</h1>
-    <SeuNome setNome={SetNome}/>
-    <Saudacao nome={nome}/>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/empresa" element={<Empresa />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
+           <Footer/>
+    </Router>
   )
 }
 
 export default App
+
